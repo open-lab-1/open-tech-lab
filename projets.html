@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open-Tech Lab | Projets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="logo">Open-Tech<br><span>Lab</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
+            <li><a href="terra-air.html">TERRA-AIR</a></li>
+            <li><a href="cours.html">Academy</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p class="maker-tag">Made by Noa</p>
+        </div>
+    </nav>
 
+    <!-- Main Content -->
+    <main class="content">
+        <div class="page-header">
+            <h1 class="page-title">Mes Projets</h1>
+            <p class="page-subtitle">Découvrez mes réalisations techniques et innovations</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <section class="projects-grid">
+            <!-- TERRA-AIR Project Card -->
+            <article class="project-card featured">
+                <div class="project-badge">
+                    <span class="badge-text">Concours SVJ 2026</span>
+                </div>
+                <div class="project-header">
+                    <h2 class="project-title">TERRA-AIR</h2>
+                    <p class="project-tagline">Station météo intelligente à arrosage autonome</p>
+                </div>
+                <div class="project-content">
+                    <p class="project-description">
+                        Système connecté combinant Raspberry Pi 5 et Arduino R4 WiFi pour gérer 
+                        intelligemment l'arrosage d'une plante. L'IA Gemini analyse les données 
+                        météo en temps réel et les prévisions pour optimiser la consommation d'eau 
+                        et d'énergie.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Raspberry Pi 5</span>
+                        <span class="tech-tag">Arduino R4</span>
+                        <span class="tech-tag">IA Gemini</span>
+                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">Solaire</span>
+                        <span class="tech-tag">Impression 3D</span>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="terra-air.html" class="project-link">
+                        Voir les détails techniques
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Placeholder for future projects -->
+            <article class="project-card upcoming">
+                <div class="upcoming-content">
+                    <div class="upcoming-icon">⚡</div>
+                    <h3>Prochains Projets</h3>
+                    <p>D'autres innovations arrivent bientôt...</p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
