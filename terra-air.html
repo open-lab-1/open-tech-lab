@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open-Tech Lab | TERRA-AIR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1 class="logo">Open-Tech<br><span>Lab</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html">Projets</a></li>
+            <li><a href="terra-air.html" class="active">TERRA-AIR</a></li>
+            <li><a href="cours.html">Academy</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p class="maker-tag">Made by Noa</p>
+        </div>
+    </nav>
 
+    <!-- Main Content -->
+    <main class="content">
+        <div class="project-hero">
+            <div class="project-badge-large">Concours Science et Vie Junior 2026</div>
+            <h1 class="project-hero-title">TERRA-AIR</h1>
+            <p class="project-hero-subtitle">Station météo autonome pilotée par IA pour un arrosage intelligent</p>
+        </div>
+
+        <!-- Concept Section -->
+        <section class="detail-section">
+            <h2 class="detail-title">Le Concept</h2>
+            <p class="detail-text">
+                TERRA-AIR est bien plus qu'une simple station météo. C'est un système autonome qui 
+                analyse le climat actuel et futur pour prendre des décisions intelligentes sur l'arrosage. 
+                Au lieu d'arroser bêtement quand le sol est sec, l'IA Gemini vérifie les prévisions météo : 
+                s'il va pleuvoir dans quelques heures, pourquoi gaspiller l'eau et la batterie ?
+            </p>
+        </section>
+
+        <!-- Architecture Section -->
+        <section class="detail-section">
+            <h2 class="detail-title">Architecture Technique</h2>
+            <div class="architecture-grid">
+                <div class="arch-block">
+                    <h3 class="arch-subtitle">Capteurs (Extérieur)</h3>
+                    <p>Arduino R4 WiFi équipé d'un capteur BMP280 pour mesurer la température, 
+                    l'humidité et la pression atmosphérique, plus un capteur d'humidité du sol.</p>
+                </div>
+                <div class="arch-block">
+                    <h3 class="arch-subtitle">Communication</h3>
+                    <p>Les données sont transmises via le protocole MQTT (Mosquitto) du Arduino 
+                    vers le Raspberry Pi 5 qui centralise les informations.</p>
+                </div>
+                <div class="arch-block">
+                    <h3 class="arch-subtitle">Intelligence</h3>
+                    <p>Le Raspberry Pi 5 analyse les données avec l'API Gemini, combine les mesures 
+                    actuelles et les prévisions météo pour décider intelligemment.</p>
+                </div>
+                <div class="arch-block">
+                    <h3 class="arch-subtitle">Action</h3>
+                    <p>Une pompe 3-6V pilotée par relais via l'Arduino assure l'arrosage uniquement 
+                    quand c'est nécessaire et optimal.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Energy Section -->
+        <section class="detail-section">
+            <h2 class="detail-title">Autonomie Énergétique</h2>
+            <p class="detail-text">
+                Le système est 100% autonome grâce à un panneau solaire 12V 300W, un contrôleur de 
+                charge 60A et une batterie 12V 7Ah Ultracell. Un convertisseur adapte l'alimentation 
+                pour les composants électroniques. Cette configuration garantit un fonctionnement 
+                continu même durant les périodes nuageuses.
+            </p>
+        </section>
+
+        <!-- 3D Design Section -->
+        <section class="detail-section">
+            <h2 class="detail-title">Conception 3D (PETG)</h2>
+            <div class="design-features">
+                <div class="feature-item">
+                    <h4>Boîtier Principal</h4>
+                    <p>Toit avec niche spécifique pour le BMP280, protégeant de la pluie tout en laissant circuler l'air</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Organisation Interne</h4>
+                    <p>Système de planches coulissantes : une pour Arduino/Convertisseur, une pour Relais/Pompe</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Sécurité</h4>
+                    <p>Séparation physique entre la batterie et les composants électroniques sensibles</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Protection Capteur</h4>
+                    <p>Boîtier spécifique pour l'électronique du capteur d'humidité du sol</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOM Section -->
+        <section class="detail-section">
+            <h2 class="detail-title">Liste du Matériel (BOM)</h2>
+            <div class="bom-table-container">
+                <table class="bom-table">
+                    <thead>
+                        <tr>
+                            <th>Composant</th>
+                            <th>Référence</th>
+                            <th>Quantité</th>
+                            <th>Lien</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Raspberry Pi 5</td>
+                            <td>8GB RAM</td>
+                            <td>1</td>
+                            <td><a href="https://www.kubii.com/fr/raspberry-pi-5/4080-raspberry-pi-5-8gb-5056561803326.html" target="_blank">Kubii</a></td>
+                        </tr>
+                        <tr>
+                            <td>Arduino R4 WiFi</td>
+                            <td>UNO R4 WiFi</td>
+                            <td>1</td>
+                            <td><a href="https://store.arduino.cc/products/uno-r4-wifi" target="_blank">Arduino Store</a></td>
+                        </tr>
+                        <tr>
+                            <td>Capteur BMP280</td>
+                            <td>Température/Humidité/Pression</td>
+                            <td>1</td>
+                            <td><a href="https://www.amazon.fr/dp/B07D8T4HP6" target="_blank">Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td>Capteur Humidité Sol</td>
+                            <td>Capacitif</td>
+                            <td>1</td>
+                            <td><a href="https://www.amazon.fr/dp/B07H3P1NRM" target="_blank">Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td>Pompe à Eau</td>
+                            <td>3-6V DC</td>
+                            <td>1</td>
+                            <td><a href="https://www.amazon.fr/dp/B07BCTD6XW" target="_blank">Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td>Relais 5V</td>
+                            <td>1 canal</td>
+                            <td>1</td>
+                            <td><a href="https://www.amazon.fr/dp/B078Q8S3C8" target="_blank">Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td>Panneau Solaire</td>
+                            <td>12V 300W</td>
+                            <td>1</td>
+                            <td><a href="https://www.amazon.fr/dp/B09PHMR8NM" target="_blank">Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td>Contrôleur de Charge</td>
+                            <td>MPPT 60A</td>
+                            <td>1</td>
+                            <td><a href="https://www.amazon.fr/dp/B07XXQBQ7Q" target="_blank">Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td>Batterie</td>
+                            <td>12V 7Ah Ultracell</td>
+                            <td>1</td>
+                            <td><a href="https://www.amazon.fr/dp/B00FGGM3C8" target="_blank">Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td>Convertisseur</td>
+                            <td>12V vers USB-C</td>
+                            <td>1</td>
+                            <td><a href="https://www.amazon.fr/dp/B09WVJ7YQD" target="_blank">Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td>Filament PETG</td>
+                            <td>1.75mm (diverses couleurs)</td>
+                            <td>~1kg</td>
+                            <td><a href="https://www.amazon.fr/dp/B07PGYHYV8" target="_blank">Amazon</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CTA Back -->
+        <div class="back-cta">
+            <a href="projets.html" class="back-button">← Retour aux Projets</a>
+        </div>
+    </main>
+</body>
+</html>
